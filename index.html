@@ -31,6 +31,7 @@ h2{text-align:center;color:#173f2b}
 .ride h2{color:white}
 .stop{display:flex;gap:15px;align-items:center;padding:15px;margin:12px 0;background:#ffffff12;border:1px solid #ffffff30;border-radius:12px}
 .stop .emoji{background:none;height:auto;min-width:50px;font-size:2.5rem}
+.stop-photo{width:75px;height:65px;object-fit:cover;border-radius:8px;flex-shrink:0}
 .stop h3{margin:0 0 5px}
 .stop p{margin:0;line-height:1.5;color:#e4edda}
 .last{border:2px solid #e5c477}
@@ -66,62 +67,64 @@ footer{text-align:center;background:#102f20;color:white;padding:25px;line-height
 <main>
 <section id="animals">
 <h2>🦁 Animal Directory</h2>
-<p class="intro">Meet the residents of Finale Zoo! The elephant has its own photograph. More animal photos can be added later.</p>
+<p class="intro">Meet the residents of Finale Zoo! Explore our animals through photographs from online image sources.</p>
 
 <div class="grid">
 
 <article class="animal"><img src="elephant.jpg" alt="African Savannah Elephant"><div class="info"><h3>African Savannah Elephant</h3><p>The giant of the savannah, with an amazing trunk and enormous ears.</p><span class="tag">Featured Animal</span></div></article>
 
-<article class="animal"><div class="emoji">🦎</div><div class="info"><h3>Eastern Blue-Tongued Lizard</h3><p>A lizard famous for its bright blue tongue.</p><span class="tag">Reptile</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/blue,tongued,lizard" alt="Eastern Blue-Tongued Lizard"><div class="info"><h3>Eastern Blue-Tongued Lizard</h3><p>A lizard famous for its bright blue tongue.</p><span class="tag">Reptile</span></div></article>
 
-<article class="animal"><div class="emoji">🕷️</div><div class="info"><h3>Goliath Birdeater</h3><p>A giant tarantula from South America.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/goliath,birdeater,tarantula" alt="Goliath Birdeater"><div class="info"><h3>Goliath Birdeater</h3><p>A giant tarantula from South America.</p><span class="tag">Invertebrate</span></div></article>
 
-<article class="animal"><div class="emoji">🕸️</div><div class="info"><h3>Brazilian Wandering Spider</h3><p>A fascinating spider native to South America.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/brazilian,wandering,spider" alt="Brazilian Wandering Spider"><div class="info"><h3>Brazilian Wandering Spider</h3><p>A fascinating spider native to South America.</p><span class="tag">Invertebrate</span></div></article>
 
-<article class="animal"><div class="emoji">🕷️</div><div class="info"><h3>Brazilian Salmon Pink Tarantula</h3><p>A large tarantula with pinkish colouring.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/salmon,pink,tarantula" alt="Brazilian Salmon Pink Tarantula"><div class="info"><h3>Brazilian Salmon Pink Tarantula</h3><p>A large tarantula with pinkish colouring.</p><span class="tag">Invertebrate</span></div></article>
 
-<article class="animal"><div class="emoji">🦏</div><div class="info"><h3>Southern White Rhinoceros</h3><p>A powerful grazer with an impressive horn.</p><span class="tag">Mammal</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/southern,white,rhinoceros" alt="Southern White Rhinoceros"><div class="info"><h3>Southern White Rhinoceros</h3><p>A powerful grazer with an impressive horn.</p><span class="tag">Mammal</span></div></article>
 
-<article class="animal"><div class="emoji">🐸</div><div class="info"><h3>Red-Eyed Tree Frog</h3><p>A colourful rainforest frog with red eyes.</p><span class="tag">Amphibian</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/red,eyed,tree,frog" alt="Red-Eyed Tree Frog"><div class="info"><h3>Red-Eyed Tree Frog</h3><p>A colourful rainforest frog with red eyes.</p><span class="tag">Amphibian</span></div></article>
 
-<article class="animal"><div class="emoji">🐸</div><div class="info"><h3>American Bullfrog</h3><p>A large frog known for its deep call.</p><span class="tag">Amphibian</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/american,bullfrog" alt="American Bullfrog"><div class="info"><h3>American Bullfrog</h3><p>A large frog known for its deep call.</p><span class="tag">Amphibian</span></div></article>
 
-<article class="animal"><div class="emoji">🦥</div><div class="info"><h3>Brown-Throated Sloth</h3><p>A slow-moving tree-dweller.</p><span class="tag">Mammal</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/brown,throated,sloth" alt="Brown-Throated Sloth"><div class="info"><h3>Brown-Throated Sloth</h3><p>A slow-moving tree-dweller.</p><span class="tag">Mammal</span></div></article>
 
-<article class="animal"><div class="emoji">🐍</div><div class="info"><h3>Boa Constrictor</h3><p>A strong snake that catches prey using its coils.</p><span class="tag">Reptile</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/boa,constrictor,snake" alt="Boa Constrictor"><div class="info"><h3>Boa Constrictor</h3><p>A strong snake that catches prey using its coils.</p><span class="tag">Reptile</span></div></article>
 
-<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Cloudless Sulphur Butterfly</h3><p>A bright yellow butterfly.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/cloudless,sulphur,butterfly" alt="Cloudless Sulphur Butterfly"><div class="info"><h3>Cloudless Sulphur Butterfly</h3><p>A bright yellow butterfly.</p><span class="tag">Butterfly House</span></div></article>
 
-<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>European Peacock Butterfly</h3><p>Known for eye-like markings on its wings.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/european,peacock,butterfly" alt="European Peacock Butterfly"><div class="info"><h3>European Peacock Butterfly</h3><p>Known for eye-like markings on its wings.</p><span class="tag">Butterfly House</span></div></article>
 
-<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Malabar Rose Butterfly</h3><p>A striking butterfly native to South Asia.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/malabar,rose,butterfly" alt="Malabar Rose Butterfly"><div class="info"><h3>Malabar Rose Butterfly</h3><p>A striking butterfly native to South Asia.</p><span class="tag">Butterfly House</span></div></article>
 
-<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Menelaus Blue Morpho Butterfly</h3><p>A brilliant blue butterfly from tropical forests.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/blue,morpho,butterfly" alt="Menelaus Blue Morpho Butterfly"><div class="info"><h3>Menelaus Blue Morpho Butterfly</h3><p>A brilliant blue butterfly from tropical forests.</p><span class="tag">Butterfly House</span></div></article>
 
-<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Kinger's Butterfly (Monarch)</h3><p>An orange-and-black butterfly — a little TADC reference!</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/monarch,butterfly" alt="Monarch Butterfly"><div class="info"><h3>Kinger's Butterfly (Monarch)</h3><p>An orange-and-black butterfly — a little TADC reference!</p><span class="tag">Butterfly House</span></div></article>
 
-<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Old World Swallowtail Butterfly</h3><p>A graceful butterfly with tail-like wing tips.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/old,world,swallowtail,butterfly" alt="Old World Swallowtail Butterfly"><div class="info"><h3>Old World Swallowtail Butterfly</h3><p>A graceful butterfly with tail-like wing tips.</p><span class="tag">Butterfly House</span></div></article>
 
-<article class="animal"><div class="emoji">🐛</div><div class="info"><h3>Amazonian Giant Centipede</h3><p>A large many-legged hunter from tropical regions.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/amazonian,giant,centipede" alt="Amazonian Giant Centipede"><div class="info"><h3>Amazonian Giant Centipede</h3><p>A large many-legged hunter from tropical regions.</p><span class="tag">Invertebrate</span></div></article>
 
-<article class="animal"><div class="emoji">🦎</div><div class="info"><h3>Axolotl</h3><p>An aquatic salamander with feathery gills.</p><span class="tag">Aquatic</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/axolotl" alt="Axolotl"><div class="info"><h3>Axolotl</h3><p>An aquatic salamander with feathery gills.</p><span class="tag">Aquatic</span></div></article>
 
-<article class="animal"><div class="emoji">🦒</div><div class="info"><h3>Reticulated Giraffe</h3><p>The tallest animal on Earth.</p><span class="tag">Mammal</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/reticulated,giraffe" alt="Reticulated Giraffe"><div class="info"><h3>Reticulated Giraffe</h3><p>The tallest animal on Earth.</p><span class="tag">Mammal</span></div></article>
 
-<article class="animal"><div class="emoji">🐅</div><div class="info"><h3>Bengal Tiger</h3><p>A powerful striped big cat.</p><span class="tag">Mammal</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/bengal,tiger" alt="Bengal Tiger"><div class="info"><h3>Bengal Tiger</h3><p>A powerful striped big cat.</p><span class="tag">Mammal</span></div></article>
 
-<article class="animal"><div class="emoji">🦫</div><div class="info"><h3>Capybara</h3><p>The world's largest living rodent and an excellent swimmer.</p><span class="tag">Mammal</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/capybara" alt="Capybara"><div class="info"><h3>Capybara</h3><p>The world's largest living rodent and an excellent swimmer.</p><span class="tag">Mammal</span></div></article>
 
-<article class="animal"><div class="emoji">🦛</div><div class="info"><h3>Hippopotamus</h3><p>A huge semi-aquatic mammal.</p><span class="tag">Mammal</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/hippopotamus" alt="Hippopotamus"><div class="info"><h3>Hippopotamus</h3><p>A huge semi-aquatic mammal.</p><span class="tag">Mammal</span></div></article>
 
-<article class="animal"><div class="emoji">🐊</div><div class="info"><h3>American Alligator</h3><p>A formidable reptile with powerful jaws.</p><span class="tag">Reptile</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/american,alligator" alt="American Alligator"><div class="info"><h3>American Alligator</h3><p>A formidable reptile with powerful jaws.</p><span class="tag">Reptile</span></div></article>
 
-<article class="animal"><div class="emoji">🦡</div><div class="info"><h3>Aardvarks and Meerkats</h3><p>NARUTO IN FINALE ZOO! Our burrowing duo and their neighbours.</p><span class="tag">Fan Favourite</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/aardvark,meerkat" alt="Aardvarks and Meerkats"><div class="info"><h3>Aardvarks and Meerkats</h3><p>NARUTO IN FINALE ZOO! Our burrowing duo and their neighbours.</p><span class="tag">Fan Favourite</span></div></article>
 
-<article class="animal"><div class="emoji">🦡</div><div class="info"><h3>European Badgers</h3><p>MY CUTIES! Striped-faced diggers with underground homes.</p><span class="tag">Cuties</span></div></article>
+<article class="animal"><img src="https://loremflickr.com/640/360/european,badger" alt="European Badgers"><div class="info"><h3>European Badgers</h3><p>MY CUTIES! Striped-faced diggers with underground homes.</p><span class="tag">Cuties</span></div></article>
 
+<!-- West African Lion intentionally left unchanged -->
 <article class="animal"><div class="emoji">🦁</div><div class="info"><h3>West African Lion</h3><p>A mighty big cat and iconic African predator.</p><span class="tag">Mammal</span></div></article>
 
+<!-- Grizzly Bears intentionally left unchanged -->
 <article class="animal"><div class="emoji">🐻</div><div class="info"><h3>Grizzly Bears</h3><p>Powerful bears with an excellent sense of smell.</p><span class="tag">Mammal</span></div></article>
 
 </div>
@@ -131,15 +134,15 @@ footer{text-align:center;background:#102f20;color:white;padding:25px;line-height
 <h2>🚤 The Final Ride</h2>
 <p class="intro">Climb aboard for one last journey through Finale Zoo!</p>
 
-<div class="stop"><div class="emoji">🦌</div><div><h3>1. Addax</h3><p>Our journey begins with this desert antelope.</p></div></div>
+<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/addax,antelope" alt="Addax"><div><h3>1. Addax</h3><p>Our journey begins with this desert antelope.</p></div></div>
 
-<div class="stop"><div class="emoji">🐃</div><div><h3>2. African Buffalo</h3><p>A powerful grazer of the African savannah.</p></div></div>
+<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/african,buffalo" alt="African Buffalo"><div><h3>2. African Buffalo</h3><p>A powerful grazer of the African savannah.</p></div></div>
 
-<div class="stop"><div class="emoji">🐧</div><div><h3>3. African Penguin</h3><p>A splash of coastal wildlife on our route.</p></div></div>
+<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/african,penguin" alt="African Penguin"><div><h3>3. African Penguin</h3><p>A splash of coastal wildlife on our route.</p></div></div>
 
-<div class="stop"><div class="emoji">🐐</div><div><h3>4. Alpine Ibex</h3><p>Look out for those incredible curved horns!</p></div></div>
+<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/alpine,ibex" alt="Alpine Ibex"><div><h3>4. Alpine Ibex</h3><p>Look out for those incredible curved horns!</p></div></div>
 
-<div class="stop last"><div class="emoji">🐻‍❄️</div><div><h3>5. Polar Bears — The Grand Finale</h3><p>The final stop of the ride. What a way to end Finale Zoo!</p></div></div>
+<div class="stop last"><img class="stop-photo" src="https://loremflickr.com/150/130/polar,bear" alt="Polar Bear"><div><h3>5. Polar Bears — The Grand Finale</h3><p>The final stop of the ride. What a way to end Finale Zoo!</p></div></div>
 
 <p class="end">THANK YOU FOR VISITING FINALE ZOO! 🌿</p>
 </section>
@@ -153,3 +156,6 @@ Thanks for being part of the journey.
 
 </body>
 </html>
+
+
+
