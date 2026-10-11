@@ -1,86 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#234b32">
-<title>Finale Zoo | The Grand Adventure</title>
+<title>Finale Zoo</title>
 <style>
-:root{--forest:#234b32;--leaf:#477a4b;--moss:#78905a;--cream:#f7f2e5;--sand:#e5d7b8;--ink:#263328;--gold:#d6b46a;--white:#fffdf7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit}.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 20px;color:white;background:linear-gradient(135deg,rgba(22,57,37,.96),rgba(65,105,61,.88)),radial-gradient(circle at 80% 20%,#9baa69,transparent 35%)}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;font-weight:800;color:#e7d39c}.hero h1{font-size:clamp(2.7rem,10vw,6.5rem);line-height:.98;letter-spacing:-.05em;margin:12px 0}.hero p{max-width:650px;font-size:1.1rem;color:#f0f2e8}.hero .mark{font-size:4.5rem;line-height:1}.btn{display:inline-block;background:var(--gold);color:#263328;text-decoration:none;font-weight:800;padding:12px 19px;border-radius:999px;margin:7px 5px}.btn.secondary{background:transparent;color:white;border:2px solid #f7f2e5}.nav{position:sticky;top:0;z-index:5;background:var(--forest);display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px}.nav a{color:white;text-decoration:none;font-weight:700;font-size:.9rem;padding:7px 12px;border-radius:20px}.nav a:hover{background:#477a4b}.section{max-width:1100px;margin:auto;padding:58px 18px}.section h2{font-size:clamp(1.8rem,6vw,3rem);line-height:1.1;color:var(--forest);margin:0 0 12px}.intro{max-width:700px;color:#596354}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.stat{background:var(--white);border:1px solid var(--sand);border-radius:18px;padding:18px;text-align:center}.stat strong{display:block;font-size:2rem;color:var(--leaf)}.stat span{font-size:.9rem}.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}.feature{background:var(--white);border:1px solid var(--sand);border-radius:18px;padding:20px;box-shadow:0 6px 18px #2b42220a}.feature .emoji{font-size:2.2rem}.feature h3{margin:8px 0 4px;color:var(--forest)}.directory{background:#e9e2ce}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.controls input,.controls select{font:inherit;padding:12px 14px;border:1px solid #b8bea8;border-radius:12px;background:var(--white);min-width:0}.controls input{flex:1;min-width:180px}.animal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.animal{background:var(--white);border:1px solid #d5c8a9;border-radius:15px;padding:15px}.animal .emoji{font-size:1.8rem}.animal h3{margin:5px 0;color:var(--forest);font-size:1.05rem}.animal p{margin:0;color:#65705f;font-size:.9rem}.count{font-weight:700;color:var(--forest)}.ride{background:var(--forest);color:white}.ride h2{color:#f4e8c9}.ride .intro{color:#e0e8d9}.stops{position:relative;margin-top:28px;display:grid;gap:12px}.stop{display:flex;gap:14px;align-items:flex-start;background:#ffffff0d;border:1px solid #ffffff30;border-radius:15px;padding:15px}.number{flex:0 0 38px;height:38px;border-radius:50%;background:var(--gold);color:var(--ink);font-weight:900;display:grid;place-items:center}.stop h3{margin:0 0 2px}.stop p{margin:0;color:#dce6d6;font-size:.92rem}.last{border:2px solid var(--gold);background:#d6b46a17}.note{font-size:.88rem;color:#68715f;margin-top:18px}footer{text-align:center;padding:30px 16px;background:#172f21;color:#e8eadf}footer strong{color:#e7d39c}.hide{display:none!important}@media(max-width:520px){.stats{grid-template-columns:1fr}.hero{min-height:72vh}.section{padding:44px 16px}.nav{gap:2px}.nav a{font-size:.82rem;padding:7px 9px}}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f4e8;color:#24372b}
+header{background:#173f2b;color:white;text-align:center;padding:40px 15px;border-bottom:7px solid #80ad62}
+header h1{font-size:clamp(2.5rem,8vw,4rem);margin:0}
+nav{background:#24563a;padding:16px;text-align:center;position:sticky;top:0}
+nav a{color:white;text-decoration:none;font-weight:bold;margin:8px}
+.hero{text-align:center;padding:40px 20px;background:linear-gradient(135deg,#dce9cb,#f7f4e8)}
+.hero p{max-width:700px;margin:auto;line-height:1.7}
+.stats{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;padding:20px;background:white}
+.stat{background:#edf3e6;padding:15px 25px;border-radius:12px;text-align:center}
+.stat strong{display:block;font-size:1.8rem;color:#286443}
+main{max-width:1150px;margin:auto;padding:20px 15px 45px}
+h2{text-align:center;color:#173f2b}
+.intro{text-align:center;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.animal{background:white;border:1px solid #dce4d5;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px #193b2415}
+.animal img{width:100%;height:180px;object-fit:cover;display:block}
+.emoji{height:145px;display:grid;place-items:center;font-size:5rem;background:#e5eddd}
+.info{padding:15px}
+.info h3{color:#173f2b;margin:0 0 8px}
+.info p{line-height:1.5;margin:0;color:#58665a}
+.tag{display:inline-block;margin-top:10px;background:#eaf1e3;padding:5px 9px;border-radius:20px;font-size:.8rem}
+.ride{margin-top:45px;padding:25px;background:#173f2b;color:white;border-radius:18px}
+.ride h2{color:white}
+.stop{display:flex;gap:15px;align-items:center;padding:15px;margin:12px 0;background:#ffffff12;border:1px solid #ffffff30;border-radius:12px}
+.stop .emoji{background:none;height:auto;min-width:50px;font-size:2.5rem}
+.stop h3{margin:0 0 5px}
+.stop p{margin:0;line-height:1.5;color:#e4edda}
+.last{border:2px solid #e5c477}
+.end{text-align:center;color:#e5c477;font-size:1.2rem;font-weight:bold;margin-top:25px}
+footer{text-align:center;background:#102f20;color:white;padding:25px;line-height:1.7}
+@media(max-width:500px){nav a{display:inline-block;margin:5px}.stop{align-items:flex-start}}
 </style>
 </head>
 <body>
-<header class="hero" id="home">
-  <div class="mark" aria-hidden="true">🌿🐘</div>
-  <div class="eyebrow">One zoo. One last adventure.</div>
-  <h1>FINALE<br>ZOO</h1>
-  <p>Welcome to the grand finale! Explore incredible animals, discover the habitats, and join us for one last unforgettable ride — all the way to the polar bears.</p>
-  <div><a class="btn" href="#animals">Explore the animals</a><a class="btn secondary" href="#ride">Take The Final Ride</a></div>
+
+<header>
+<h1>🌿 FINALE ZOO 🌿</h1>
+<p>One zoo. Incredible animals. One unforgettable finale.</p>
 </header>
-<nav class="nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#animals">Animals</a><a href="#ride">The Final Ride</a></nav>
-<main>
-<section class="section" id="about">
-  <div class="eyebrow" style="color:var(--leaf)">Welcome, explorers</div>
-  <h2>A zoo built for one big finale.</h2>
-  <p class="intro">Finale Zoo is a celebration of the animals, habitats, and ridiculous moments that made this zoo special. Wander through the directory, pick your favourite animal, and save the best for last.</p>
-  <div class="stats"><div class="stat"><strong>28</strong><span>Habitats</span></div><div class="stat"><strong>33</strong><span>Animal species</span></div><div class="stat"><strong>1</strong><span>Final ride</span></div></div>
-  <div class="feature-grid"><article class="feature"><div class="emoji">🐜</div><h3>Small but mighty</h3><p>Meet tiny wonders, colourful butterflies, frogs, spiders, and other amazing little creatures.</p></article><article class="feature"><div class="emoji">🦒</div><h3>Giants of the zoo</h3><p>From towering giraffes to elephants and rhinos, there are some seriously big personalities here.</p></article><article class="feature"><div class="emoji">🚤</div><h3>The grand finale</h3><p>Hop aboard The Final Ride for the last stretch of the adventure, ending at the polar bears.</p></article></div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#animals">Animals</a>
+<a href="#final-ride">The Final Ride</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Welcome to Finale Zoo!</h2>
+<p>Explore amazing wildlife, meet our incredible residents, and join us for The Final Ride — an adventure ending with the polar bears!</p>
 </section>
-<section class="directory" id="animals"><div class="section">
-  <div class="eyebrow" style="color:var(--leaf)">Meet the residents</div><h2>The animal directory</h2><p class="intro">Search for an animal or choose a group. There are 33 species to discover!</p>
-  <div class="controls"><input id="search" type="search" placeholder="🔎 Search animals…" aria-label="Search animals"><select id="group" aria-label="Filter animals"><option value="all">All animals</option><option value="mammal">Mammals</option><option value="reptile">Reptiles</option><option value="amphibian">Amphibians</option><option value="invertebrate">Invertebrates</option><option value="ride">The Final Ride</option></select></div>
-  <p class="count" id="count" aria-live="polite">33 species</p><div class="animal-grid" id="animalGrid">
-  <article class="animal" data-group="mammal" data-name="African Savannah Elephant"><div class="file">elephant.jpg</div><h3>African Savannah Elephant</h3><p>A gentle giant with a remarkable trunk.</p></article>
-  <article class="animal" data-group="reptile" data-name="Eastern Blue-Tongued Lizard"><div class="emoji">🦎</div><h3>Eastern Blue-Tongued Lizard</h3><p>A lizard famous for its bright blue tongue.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Goliath Birdeater"><div class="emoji">🕷️</div><h3>Goliath Birdeater</h3><p>One of the world's largest spiders.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Brazilian Wandering Spider"><div class="emoji">🕷️</div><h3>Brazilian Wandering Spider</h3><p>A striking spider from South America.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Brazilian Salmon Pink Tarantula"><div class="emoji">🕸️</div><h3>Brazilian Salmon Pink Tarantula</h3><p>A large tarantula with pinkish hairs.</p></article>
-  <article class="animal" data-group="mammal" data-name="Southern White Rhinoceros"><div class="emoji">🦏</div><h3>Southern White Rhinoceros</h3><p>A powerful grazer with a famous horn.</p></article>
-  <article class="animal" data-group="amphibian" data-name="Red-Eyed Tree Frog"><div class="emoji">🐸</div><h3>Red-Eyed Tree Frog</h3><p>A colourful rainforest climber.</p></article>
-  <article class="animal" data-group="amphibian" data-name="American Bullfrog"><div class="emoji">🐸</div><h3>American Bullfrog</h3><p>A big frog with a very loud call.</p></article>
-  <article class="animal" data-group="mammal" data-name="Brown-Throated Sloth"><div class="emoji">🦥</div><h3>Brown-Throated Sloth</h3><p>A slow-moving tree-dweller.</p></article>
-  <article class="animal" data-group="reptile" data-name="Boa Constrictor"><div class="emoji">🐍</div><h3>Boa Constrictor</h3><p>A strong snake that squeezes its prey.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Cloudless Sulphur Butterfly"><div class="emoji">🦋</div><h3>Cloudless Sulphur Butterfly</h3><p>A sunny yellow butterfly.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="European Peacock Butterfly"><div class="emoji">🦋</div><h3>European Peacock Butterfly</h3><p>Recognisable by its eye-like wing spots.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Malabar Rose Butterfly"><div class="emoji">🦋</div><h3>Malabar Rose Butterfly</h3><p>A graceful butterfly with dark wings.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Menelaus Blue Morpho Butterfly"><div class="emoji">🦋</div><h3>Menelaus Blue Morpho Butterfly</h3><p>Famous for brilliant blue wings.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Monarch Butterfly Kinger's Butterfly"><div class="emoji">🦋</div><h3>Monarch Butterfly</h3><p>Also known here as <strong>Kinger's Butterfly</strong>!</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Old World Swallowtail Butterfly"><div class="emoji">🦋</div><h3>Old World Swallowtail Butterfly</h3><p>A yellow-and-black butterfly.</p></article>
-  <article class="animal" data-group="invertebrate" data-name="Amazonian Giant Centipede"><div class="emoji">🐛</div><h3>Amazonian Giant Centipede</h3><p>A many-legged hunter from tropical regions.</p></article>
-  <article class="animal" data-group="amphibian" data-name="Axolotl"><div class="emoji">🦎</div><h3>Axolotl</h3><p>An aquatic salamander with feathery gills.</p></article>
-  <article class="animal" data-group="mammal" data-name="Reticulated Giraffe"><div class="emoji">🦒</div><h3>Reticulated Giraffe</h3><p>The tallest animal on Earth.</p></article>
-  <article class="animal" data-group="mammal" data-name="Bengal Tiger"><div class="emoji">🐅</div><h3>Bengal Tiger</h3><p>A striped big cat and powerful swimmer.</p></article>
-  <article class="animal" data-group="mammal" data-name="Capybara"><div class="emoji">🦫</div><h3>Capybara</h3><p>The world's largest living rodent.</p></article>
-  <article class="animal" data-group="mammal" data-name="Hippopotamus"><div class="emoji">🦛</div><h3>Hippopotamus</h3><p>A huge semi-aquatic mammal.</p></article>
-  <article class="animal" data-group="reptile" data-name="American Alligator"><div class="emoji">🐊</div><h3>American Alligator</h3><p>A reptile with a powerful bite.</p></article>
-  <article class="animal" data-group="mammal" data-name="Aardvark"><div class="emoji">🐽</div><h3>Aardvark</h3><p>Finale Zoo's legendary living hoover!</p></article>
-  <article class="animal" data-group="mammal" data-name="Meerkat"><div class="emoji">🦦</div><h3>Meerkat</h3><p>A social animal that often stands upright to look around.</p></article>
-  <article class="animal" data-group="mammal" data-name="European Badger"><div class="emoji">🦡</div><h3>European Badger</h3><p>One of the zoo's absolute cuties.</p></article>
-  <article class="animal" data-group="mammal" data-name="West African Lion"><div class="emoji">🦁</div><h3>West African Lion</h3><p>A mighty big cat with a powerful roar.</p></article>
-  <article class="animal" data-group="mammal" data-name="Grizzly Bear"><div class="emoji">🐻</div><h3>Grizzly Bear</h3><p>A large bear known for its shoulder hump.</p></article>
-  <article class="animal" data-group="ride" data-name="Addax"><div class="emoji">🦌</div><h3>Addax</h3><p>A desert antelope with twisted horns.</p></article>
-  <article class="animal" data-group="ride" data-name="African Buffalo"><div class="emoji">🐃</div><h3>African Buffalo</h3><p>A formidable resident of the African savanna.</p></article>
-  <article class="animal" data-group="ride" data-name="African Penguin"><div class="emoji">🐧</div><h3>African Penguin</h3><p>A coastal penguin with a distinctive call.</p></article>
-  <article class="animal" data-group="ride" data-name="Alpine Ibex"><div class="emoji">🐐</div><h3>Alpine Ibex</h3><p>A sure-footed mountain climber.</p></article>
-  <article class="animal" data-group="ride" data-name="Polar Bear"><div class="emoji">🐻‍❄️</div><h3>Polar Bear</h3><p>The final stop of The Final Ride!</p></article>
-  </div><p class="note">Animal descriptions are short introductions. The directory includes the two species sharing the aardvark-and-meerkat habitat.</p>
-</div></section>
-<section class="section ride" id="ride"><div class="eyebrow">Please remain seated</div><h2>🚤 The Final Ride</h2><p class="intro">The last journey through Finale Zoo. Enjoy these final stops — and keep your eyes open for the grand finale.</p>
-<div class="stops">
-  <div class="stop"><div class="number">1</div><div><h3>Addax</h3><p>Begin the final stretch with a desert specialist.</p></div></div>
-  <div class="stop"><div class="number">2</div><div><h3>African Buffalo</h3><p>Next, meet one of Africa's powerful grazers.</p></div></div>
-  <div class="stop"><div class="number">3</div><div><h3>African Penguin</h3><p>A chilly-feathered stop before the grand finale.</p></div></div>
-  <div class="stop"><div class="number">4</div><div><h3>Alpine Ibex</h3><p>Watch out for these mountain-climbing experts.</p></div></div>
-  <div class="stop last"><div class="number">★</div><div><h3>POLAR BEARS — THE FINAL STOP!</h3><p>And that's the end of the ride. Thanks for being part of the Finale Zoo adventure. 🐻‍❄️</p></div></div>
-</div><p style="margin-top:26px"><a class="btn" href="#home">Back to the entrance ↑</a></p>
+
+<div class="stats">
+<div class="stat"><strong>28</strong>Habitats</div>
+<div class="stat"><strong>33</strong>Species</div>
+<div class="stat"><strong>1</strong>Grand Finale</div>
+</div>
+
+<main>
+<section id="animals">
+<h2>🦁 Animal Directory</h2>
+<p class="intro">Meet the residents of Finale Zoo! The elephant has its own photograph. More animal photos can be added later.</p>
+
+<div class="grid">
+
+<article class="animal"><img src="elephant.jpg" alt="African Savannah Elephant"><div class="info"><h3>African Savannah Elephant</h3><p>The giant of the savannah, with an amazing trunk and enormous ears.</p><span class="tag">Featured Animal</span></div></article>
+
+<article class="animal"><div class="emoji">🦎</div><div class="info"><h3>Eastern Blue-Tongued Lizard</h3><p>A lizard famous for its bright blue tongue.</p><span class="tag">Reptile</span></div></article>
+
+<article class="animal"><div class="emoji">🕷️</div><div class="info"><h3>Goliath Birdeater</h3><p>A giant tarantula from South America.</p><span class="tag">Invertebrate</span></div></article>
+
+<article class="animal"><div class="emoji">🕸️</div><div class="info"><h3>Brazilian Wandering Spider</h3><p>A fascinating spider native to South America.</p><span class="tag">Invertebrate</span></div></article>
+
+<article class="animal"><div class="emoji">🕷️</div><div class="info"><h3>Brazilian Salmon Pink Tarantula</h3><p>A large tarantula with pinkish colouring.</p><span class="tag">Invertebrate</span></div></article>
+
+<article class="animal"><div class="emoji">🦏</div><div class="info"><h3>Southern White Rhinoceros</h3><p>A powerful grazer with an impressive horn.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🐸</div><div class="info"><h3>Red-Eyed Tree Frog</h3><p>A colourful rainforest frog with red eyes.</p><span class="tag">Amphibian</span></div></article>
+
+<article class="animal"><div class="emoji">🐸</div><div class="info"><h3>American Bullfrog</h3><p>A large frog known for its deep call.</p><span class="tag">Amphibian</span></div></article>
+
+<article class="animal"><div class="emoji">🦥</div><div class="info"><h3>Brown-Throated Sloth</h3><p>A slow-moving tree-dweller.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🐍</div><div class="info"><h3>Boa Constrictor</h3><p>A strong snake that catches prey using its coils.</p><span class="tag">Reptile</span></div></article>
+
+<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Cloudless Sulphur Butterfly</h3><p>A bright yellow butterfly.</p><span class="tag">Butterfly House</span></div></article>
+
+<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>European Peacock Butterfly</h3><p>Known for eye-like markings on its wings.</p><span class="tag">Butterfly House</span></div></article>
+
+<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Malabar Rose Butterfly</h3><p>A striking butterfly native to South Asia.</p><span class="tag">Butterfly House</span></div></article>
+
+<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Menelaus Blue Morpho Butterfly</h3><p>A brilliant blue butterfly from tropical forests.</p><span class="tag">Butterfly House</span></div></article>
+
+<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Kinger's Butterfly (Monarch)</h3><p>An orange-and-black butterfly — a little TADC reference!</p><span class="tag">Butterfly House</span></div></article>
+
+<article class="animal"><div class="emoji">🦋</div><div class="info"><h3>Old World Swallowtail Butterfly</h3><p>A graceful butterfly with tail-like wing tips.</p><span class="tag">Butterfly House</span></div></article>
+
+<article class="animal"><div class="emoji">🐛</div><div class="info"><h3>Amazonian Giant Centipede</h3><p>A large many-legged hunter from tropical regions.</p><span class="tag">Invertebrate</span></div></article>
+
+<article class="animal"><div class="emoji">🦎</div><div class="info"><h3>Axolotl</h3><p>An aquatic salamander with feathery gills.</p><span class="tag">Aquatic</span></div></article>
+
+<article class="animal"><div class="emoji">🦒</div><div class="info"><h3>Reticulated Giraffe</h3><p>The tallest animal on Earth.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🐅</div><div class="info"><h3>Bengal Tiger</h3><p>A powerful striped big cat.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🦫</div><div class="info"><h3>Capybara</h3><p>The world's largest living rodent and an excellent swimmer.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🦛</div><div class="info"><h3>Hippopotamus</h3><p>A huge semi-aquatic mammal.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🐊</div><div class="info"><h3>American Alligator</h3><p>A formidable reptile with powerful jaws.</p><span class="tag">Reptile</span></div></article>
+
+<article class="animal"><div class="emoji">🦡</div><div class="info"><h3>Aardvarks and Meerkats</h3><p>NARUTO IN FINALE ZOO! Our burrowing duo and their neighbours.</p><span class="tag">Fan Favourite</span></div></article>
+
+<article class="animal"><div class="emoji">🦡</div><div class="info"><h3>European Badgers</h3><p>MY CUTIES! Striped-faced diggers with underground homes.</p><span class="tag">Cuties</span></div></article>
+
+<article class="animal"><div class="emoji">🦁</div><div class="info"><h3>West African Lion</h3><p>A mighty big cat and iconic African predator.</p><span class="tag">Mammal</span></div></article>
+
+<article class="animal"><div class="emoji">🐻</div><div class="info"><h3>Grizzly Bears</h3><p>Powerful bears with an excellent sense of smell.</p><span class="tag">Mammal</span></div></article>
+
+</div>
+</section>
+
+<section class="ride" id="final-ride">
+<h2>🚤 The Final Ride</h2>
+<p class="intro">Climb aboard for one last journey through Finale Zoo!</p>
+
+<div class="stop"><div class="emoji">🦌</div><div><h3>1. Addax</h3><p>Our journey begins with this desert antelope.</p></div></div>
+
+<div class="stop"><div class="emoji">🐃</div><div><h3>2. African Buffalo</h3><p>A powerful grazer of the African savannah.</p></div></div>
+
+<div class="stop"><div class="emoji">🐧</div><div><h3>3. African Penguin</h3><p>A splash of coastal wildlife on our route.</p></div></div>
+
+<div class="stop"><div class="emoji">🐐</div><div><h3>4. Alpine Ibex</h3><p>Look out for those incredible curved horns!</p></div></div>
+
+<div class="stop last"><div class="emoji">🐻‍❄️</div><div><h3>5. Polar Bears — The Grand Finale</h3><p>The final stop of the ride. What a way to end Finale Zoo!</p></div></div>
+
+<p class="end">THANK YOU FOR VISITING FINALE ZOO! 🌿</p>
 </section>
 </main>
-<footer><strong>FINALE ZOO</strong><br>Thanks for visiting. Every great adventure deserves a grand finale. 🌿</footer>
-<script>
-const search=document.getElementById('search'),group=document.getElementById('group'),cards=[...document.querySelectorAll('.animal')],count=document.getElementById('count');
-function filterAnimals(){const q=search.value.trim().toLowerCase(),g=group.value;let shown=0;cards.forEach(card=>{const matchesName=card.dataset.name.toLowerCase().includes(q)||card.innerText.toLowerCase().includes(q);const matchesGroup=g==='all'||card.dataset.group===g;const visible=matchesName&&matchesGroup;card.classList.toggle('hide',!visible);if(visible)shown++});count.textContent=shown+' species shown';}
-search.addEventListener('input',filterAnimals);group.addEventListener('change',filterAnimals);
-</script>
+
+<footer>
+<strong>FINALE ZOO</strong><br>
+A wildlife adventure built with passion.<br>
+Thanks for being part of the journey.
+</footer>
+
 </body>
 </html>
