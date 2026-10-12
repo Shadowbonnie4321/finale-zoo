@@ -1,102 +1,315 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finale Zoo</title>
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f3e7;color:#263b2b}
+header{background:#173f2b;color:white;text-align:center;padding:38px 16px;border-bottom:7px solid #8db66c}
+header h1{font-size:clamp(2.5rem,8vw,4.5rem);margin:0 0 10px}
+header p{font-size:1.1rem;margin:0}
+nav{background:#24563a;padding:14px;text-align:center;position:sticky;top:0;z-index:5}
+nav a{color:white;text-decoration:none;font-weight:bold;margin:0 12px;display:inline-block;padding:5px}
+nav a:hover{text-decoration:underline}
+.hero{text-align:center;padding:38px 20px;background:linear-gradient(135deg,#dce9cb,#f5f3e7)}
+.hero p{max-width:750px;margin:auto;line-height:1.7}
+.stats{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;padding:20px;background:white}
+.stat{background:#edf3e6;padding:14px 24px;border-radius:12px;text-align:center}
+.stat strong{display:block;font-size:1.8rem;color:#286443}
+main{max-width:1200px;margin:auto;padding:20px 16px 45px}
+h2{text-align:center;color:#173f2b}
+.intro{text-align:center;line-height:1.7;max-width:850px;margin:0 auto 25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.animal{background:white;border:1px solid #dce4d5;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px #193b2415}
+.animal img{width:100%;height:190px;object-fit:cover;display:block;background:#e5eddd;color:#24372b}
+.animal img.loading{object-fit:contain;padding:15px}
+.info{padding:16px}
+.info h3{color:#173f2b;margin:0 0 10px;font-size:1.15rem}
+.info p{line-height:1.65;margin:0;color:#4d5e50}
+.tag{display:inline-block;margin-top:12px;background:#eaf1e3;padding:6px 10px;border-radius:20px;font-size:.8rem}
+.ride{margin-top:45px;padding:25px;background:#173f2b;color:white;border-radius:18px}
+.ride h2{color:white}
+.ride-intro{text-align:center;line-height:1.7}
+.stop{display:flex;gap:16px;align-items:center;padding:15px;margin:13px 0;background:#ffffff12;border:1px solid #ffffff30;border-radius:12px}
+.stop img{width:100px;height:78px;object-fit:cover;border-radius:8px;flex-shrink:0;background:#e5eddd}
+.stop h3{margin:0 0 7px}
+.stop p{margin:0;line-height:1.6;color:#e4edda}
+.end{text-align:center;color:#f2d58c;font-size:1.3rem;font-weight:bold;margin-top:25px}
+footer{text-align:center;background:#102f20;color:white;padding:25px;line-height:1.8}
+footer a{color:#e4edda}
+@media(max-width:500px){nav a{margin:4px}.stop{align-items:flex-start}.stop img{width:76px;height:68px}.info p{font-size:.95rem}}
+</style>
+</head>
+<body>
+<header>
+<h1>🌿 FINALE ZOO 🌿</h1>
+<p>One zoo. Incredible animals. One unforgettable finale.</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#animals">Animals</a>
+<a href="#final-ride">The Final Ride</a>
+</nav>
+
+<section class="hero" id="home">
+<h2>Welcome to Finale Zoo!</h2>
+<p>Welcome to a celebration of amazing wildlife! Meet our incredible residents, discover fascinating animal facts and explore habitats inspired by the natural world. And when you're ready, join us for The Final Ride — the grand adventure that brings our zoo journey to a close.</p>
+</section>
+
 <div class="stats">
-<div class="stat"><strong>28</strong>Habitats</div>
-<div class="stat"><strong>33</strong>Species</div>
-<div class="stat"><strong>1</strong>Grand Finale</div>
+<div class="stat"><strong>Finale Zoo</strong>Our wildlife adventure</div>
+<div class="stat"><strong>25+</strong>Animal profiles</div>
+<div class="stat"><strong>1</strong>Grand finale</div>
 </div>
 
 <main>
 <section id="animals">
-<h2>🦁 Animal Directory</h2>
-<p class="intro">Meet the residents of Finale Zoo! Explore our animals through photographs from online image sources like capybaras,spiders and aardvarks!</p>
+<h2>🦁 Meet the Animals</h2>
+<p class="intro">Every animal has a story. Read about our residents, their natural habitats, their amazing adaptations and the challenges they face in the wild. The photos load from Wikipedia when an internet connection is available, except for the blue-tongued skink, which uses our own picture.</p>
 
 <div class="grid">
 
-<article class="animal"><img src="elephant.jpg" alt="African Savannah Elephant"><div class="info"><h3>African Savannah Elephant</h3><p>The giant of the savannah, with an amazing trunk and enormous ears.</p><span class="tag">Featured Animal</span></div></article>
+<article class="animal">
+<img data-wiki="African bush elephant" alt="African Savannah Elephant" loading="lazy">
+<div class="info"><h3>African Savannah Elephant</h3>
+<p>The African savannah elephant is the largest land animal on Earth. Its trunk can smell, breathe, pick up food, drink water and greet other elephants. Huge ears help release heat in the African sun, while tusks can help with digging and moving objects. Elephants live in close family groups and communicate using sounds that can travel over long distances. These intelligent giants need large areas to find food and water.</p><span class="tag">Featured Animal</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/blue,tongued,lizard" alt="Eastern Blue-Tongued Lizard"><div class="info"><h3>Eastern Blue-Tongued Lizard</h3><p>A lizard famous for its bright blue tongue.</p><span class="tag">Reptile</span></div></article>
+<article class="animal">
+<img src="./1a12bfd1cbe54-screenshotUrl.jpg" alt="Blue-Tongued Skink" loading="lazy">
+<div class="info"><h3>Eastern Blue-Tongued Lizard</h3>
+<p>This Australian lizard is famous for its bright blue tongue, which it flashes to surprise predators. Its sturdy body and short legs help it search for fruit, flowers, insects and other food on the ground. If threatened, it may hiss and flatten its body to look larger. Blue-tongued skinks are well adapted to life among leaf litter, logs and low vegetation. Their blue tongues are a brilliant defence display, helping them appear more intimidating to potential predators. They are ground-dwelling reptiles that use their strong jaws to eat a varied diet. With proper care, blue-tongued skinks can live for many years.</p><span class="tag">Reptile · Special Photo</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/goliath,birdeater,tarantula" alt="Goliath Birdeater"><div class="info"><h3>Goliath Birdeater</h3><p>A giant tarantula from South America.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal">
+<img data-wiki="Goliath birdeater" alt="Goliath Birdeater" loading="lazy">
+<div class="info"><h3>Goliath Birdeater</h3>
+<p>Native to the rainforests of northern South America, the Goliath birdeater is one of the heaviest spiders in the world. Despite its name, it mainly eats insects and other small animals rather than birds. It often shelters in a burrow and uses sensitive hairs to detect movement nearby. Its enormous size and powerful fangs make it an impressive predator of the forest floor.</p><span class="tag">Invertebrate</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/brazilian,wandering,spider" alt="Brazilian Wandering Spider"><div class="info"><h3>Brazilian Wandering Spider</h3><p>A fascinating spider native to South America.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal">
+<img data-wiki="Phoneutria nigriventer" alt="Brazilian Wandering Spider" loading="lazy">
+<div class="info"><h3>Brazilian Wandering Spider</h3>
+<p>This active spider hunts at night instead of building a web to catch prey. It wanders through tropical habitats searching for insects and other small animals. Some wandering spiders have medically significant venom, so they must be observed safely and never handled. Their hunting behaviour makes them different from spiders that wait quietly for prey to become trapped in a web.</p><span class="tag">Invertebrate</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/salmon,pink,tarantula" alt="Brazilian Salmon Pink Tarantula"><div class="info"><h3>Brazilian Salmon Pink Tarantula</h3><p>A large tarantula with pinkish colouring.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal">
+<img data-wiki="Brazilian salmon pink birdeater" alt="Brazilian Salmon Pink Tarantula" loading="lazy">
+<div class="info"><h3>Brazilian Salmon Pink Tarantula</h3>
+<p>This large tarantula comes from Brazil and is known for the pinkish hairs covering its body and legs. It hunts insects and other small animals, using its strong legs to capture prey. Specialised hairs help it sense vibrations around its burrow. Like many tarantulas, it spends much of its time on the ground and relies on camouflage and patience to survive.</p><span class="tag">Invertebrate</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/southern,white,rhinoceros" alt="Southern White Rhinoceros"><div class="info"><h3>Southern White Rhinoceros</h3><p>A powerful grazer with an impressive horn.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Southern white rhinoceros" alt="Southern White Rhinoceros" loading="lazy">
+<div class="info"><h3>Southern White Rhinoceros</h3>
+<p>This enormous herbivore spends much of its day grazing on grass. Its broad mouth is specially shaped to crop short vegetation, and its powerful body helps it travel across open grasslands. Rhino horns are made of keratin, the same material found in human hair and fingernails. Poaching and habitat pressures have threatened rhinos, making conservation and protected areas essential to their future.</p><span class="tag">Mammal</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/red,eyed,tree,frog" alt="Red-Eyed Tree Frog"><div class="info"><h3>Red-Eyed Tree Frog</h3><p>A colourful rainforest frog with red eyes.</p><span class="tag">Amphibian</span></div></article>
+<article class="animal">
+<img data-wiki="Red-eyed tree frog" alt="Red-Eyed Tree Frog" loading="lazy">
+<div class="info"><h3>Red-Eyed Tree Frog</h3>
+<p>This colourful rainforest amphibian has brilliant red eyes, a green body and orange feet. It is mainly active at night, when it hunts insects among the leaves. Its bright colours can startle predators, while its green back helps it blend into leafy surroundings when resting. Specialised toe pads help it cling to plants as it climbs through its humid tropical habitat.</p><span class="tag">Amphibian</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/american,bullfrog" alt="American Bullfrog"><div class="info"><h3>American Bullfrog</h3><p>A large frog known for its deep call.</p><span class="tag">Amphibian</span></div></article>
+<article class="animal">
+<img data-wiki="American bullfrog" alt="American Bullfrog" loading="lazy">
+<div class="info"><h3>American Bullfrog</h3>
+<p>One of North America's largest frogs, the American bullfrog lives around ponds, lakes and wetlands. Males make a deep call that sounds a little like a cow mooing. It waits near the water for insects and other suitable prey, then uses powerful hind legs to leap away from danger. Its life cycle begins as an egg, develops through a tadpole stage and eventually becomes an adult frog.</p><span class="tag">Amphibian</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/brown,throated,sloth" alt="Brown-Throated Sloth"><div class="info"><h3>Brown-Throated Sloth</h3><p>A slow-moving tree-dweller.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Brown-throated sloth" alt="Brown-Throated Sloth" loading="lazy">
+<div class="info"><h3>Brown-Throated Sloth</h3>
+<p>This slow-moving mammal lives high in Central and South American forest canopies. Curved claws help it hang upside down while it eats leaves and rests. Sloths conserve energy by moving slowly, and algae growing in their fur can sometimes give them a greenish appearance. Their specialised limbs and gripping claws make them excellent climbers, perfectly suited to life in the trees.</p><span class="tag">Mammal</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/boa,constrictor,snake" alt="Boa Constrictor"><div class="info"><h3>Boa Constrictor</h3><p>A strong snake that catches prey using its coils.</p><span class="tag">Reptile</span></div></article>
+<article class="animal">
+<img data-wiki="Boa constrictor" alt="Boa Constrictor" loading="lazy">
+<div class="info"><h3>Boa Constrictor</h3>
+<p>Boa constrictors are powerful snakes found in Central and South America. Their forked tongues collect scent particles, helping them explore their surroundings and locate prey. Instead of using venom, they wrap their muscular bodies around prey. Their patterned scales provide camouflage among branches and leaf litter. After catching prey, a boa can swallow it whole using its flexible jaws.</p><span class="tag">Reptile</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/cloudless,sulphur,butterfly" alt="Cloudless Sulphur Butterfly"><div class="info"><h3>Cloudless Sulphur Butterfly</h3><p>A bright yellow butterfly.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal">
+<img data-wiki="Cloudless sulphur" alt="Cloudless Sulphur Butterfly" loading="lazy">
+<div class="info"><h3>Cloudless Sulphur Butterfly</h3>
+<p>This bright yellow butterfly flies through warm, sunny habitats and visits flowers for nectar. Its caterpillars feed on particular host plants before forming a chrysalis and emerging as adults. Its fast, fluttering flight can make it look like a tiny flash of sunshine. As it visits flowers, it can also help transfer pollen between plants.</p><span class="tag">Butterfly House</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/european,peacock,butterfly" alt="European Peacock Butterfly"><div class="info"><h3>European Peacock Butterfly</h3><p>Known for eye-like markings on its wings.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal">
+<img data-wiki="European peacock butterfly" alt="European Peacock Butterfly" loading="lazy">
+<div class="info"><h3>European Peacock Butterfly</h3>
+<p>The European peacock butterfly has large eyespots on its wings that can startle potential predators. When it closes its wings, the dark underside helps it blend into its surroundings. Adults feed on nectar, while caterpillars commonly feed on nettles. Its striking markings make it one of Europe's most recognisable butterflies and a colourful addition to the Butterfly House.</p><span class="tag">Butterfly House</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/malabar,rose,butterfly" alt="Malabar Rose Butterfly"><div class="info"><h3>Malabar Rose Butterfly</h3><p>A striking butterfly native to South Asia.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal">
+<img data-wiki="Malabar rose butterfly" alt="Malabar Rose Butterfly" loading="lazy">
+<div class="info"><h3>Malabar Rose Butterfly</h3>
+<p>The Malabar rose is a striking swallowtail butterfly associated with the Indian subcontinent. Its dark wings feature pale markings and red details, making it easy to recognise. Like other butterflies, it begins life as a caterpillar, then forms a chrysalis before emerging as an adult. Its life cycle shows the remarkable transformation known as complete metamorphosis.</p><span class="tag">Butterfly House</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/blue,morpho,butterfly" alt="Menelaus Blue Morpho Butterfly"><div class="info"><h3>Menelaus Blue Morpho Butterfly</h3><p>A brilliant blue butterfly from tropical forests.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal">
+<img data-wiki="Morpho menelaus" alt="Menelaus Blue Morpho Butterfly" loading="lazy">
+<div class="info"><h3>Menelaus Blue Morpho Butterfly</h3>
+<p>This tropical butterfly is famous for its brilliant blue wings. The colour is created by the way microscopic scales reflect light, rather than simply by blue pigment. Underneath, its wings are brown and patterned, helping it hide among leaves when resting. As it flies through the forest, flashes of bright blue can make it look almost magical.</p><span class="tag">Butterfly House</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/monarch,butterfly" alt="Monarch Butterfly"><div class="info"><h3>Kinger's Butterfly (Monarch)</h3><p>An orange-and-black butterfly — a little TADC reference!</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal">
+<img data-wiki="Monarch butterfly" alt="Kinger's Butterfly" loading="lazy">
+<div class="info"><h3>Kinger's Butterfly (Monarch)</h3>
+<p>Kinger's Butterfly is our TADC tribute! The real monarch butterfly has bold orange-and-black wings edged with white spots. Some monarch populations in North America undertake extraordinary migrations between breeding areas and wintering sites. Their journey can involve several generations. Like all butterflies, monarchs begin life as caterpillars before changing inside a chrysalis and emerging with wings.</p><span class="tag">TADC Tribute</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/old,world,swallowtail,butterfly" alt="Old World Swallowtail Butterfly"><div class="info"><h3>Old World Swallowtail Butterfly</h3><p>A graceful butterfly with tail-like wing tips.</p><span class="tag">Butterfly House</span></div></article>
+<article class="animal">
+<img data-wiki="Old World swallowtail" alt="Old World Swallowtail Butterfly" loading="lazy">
+<div class="info"><h3>Old World Swallowtail Butterfly</h3>
+<p>This large butterfly has yellow-and-black wings with small tail-like extensions on its hindwings. It lives across much of Europe and Asia, where adults visit flowers for nectar. Its caterpillars feed on plants in the carrot family before pupating. The swallowtail's elegant flight and bold wing patterns make it a standout resident of our Butterfly House.</p><span class="tag">Butterfly House</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/amazonian,giant,centipede" alt="Amazonian Giant Centipede"><div class="info"><h3>Amazonian Giant Centipede</h3><p>A large many-legged hunter from tropical regions.</p><span class="tag">Invertebrate</span></div></article>
+<article class="animal">
+<img data-wiki="Scolopendra gigantea" alt="Amazonian Giant Centipede" loading="lazy">
+<div class="info"><h3>Amazonian Giant Centipede</h3>
+<p>This large centipede lives in tropical parts of South America. Its long, flattened body and many pairs of legs help it move quickly through leaf litter and crevices. It is a predator that catches insects and other small animals using modified front limbs that deliver venom. Although its appearance can be intimidating, it plays an important role in its ecosystem as a hunter.</p><span class="tag">Invertebrate</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/axolotl" alt="Axolotl"><div class="info"><h3>Axolotl</h3><p>An aquatic salamander with feathery gills.</p><span class="tag">Aquatic</span></div></article>
+<article class="animal">
+<img data-wiki="Axolotl" alt="Axolotl" loading="lazy">
+<div class="info"><h3>Axolotl</h3>
+<p>The axolotl is an aquatic salamander native to lakes around Mexico City. Unlike most amphibians, it usually keeps its feathery external gills and aquatic features throughout adulthood. It can regenerate certain body parts, including limbs, making it important in scientific research. Wild axolotls are critically endangered, so protecting their remaining wetland habitat is especially important.</p><span class="tag">Amphibian</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/reticulated,giraffe" alt="Reticulated Giraffe"><div class="info"><h3>Reticulated Giraffe</h3><p>The tallest animal on Earth.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Reticulated giraffe" alt="Reticulated Giraffe" loading="lazy">
+<div class="info"><h3>Reticulated Giraffe</h3>
+<p>The reticulated giraffe is one of the tallest land animals on Earth. Its long neck helps it reach leaves high in trees, while its distinctive coat pattern breaks up its outline among branches and shadows. A long, flexible tongue helps it pull leaves from thorny plants. Giraffes often live in loose groups and can use their height to spot danger across open landscapes.</p><span class="tag">Mammal</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/bengal,tiger" alt="Bengal Tiger"><div class="info"><h3>Bengal Tiger</h3><p>A powerful striped big cat.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Bengal tiger" alt="Bengal Tiger" loading="lazy">
+<div class="info"><h3>Bengal Tiger</h3>
+<p>The Bengal tiger is a powerful big cat native to the Indian subcontinent. Its orange coat and dark stripes provide camouflage in forests and tall grass. Tigers are usually solitary hunters, relying on stealth and strength to catch prey. Every tiger has its own stripe pattern, and protecting large natural habitats is essential for the survival of wild tiger populations.</p><span class="tag">Big Cat</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/capybara" alt="Capybara"><div class="info"><h3>Capybara</h3><p>The world's largest living rodent and an excellent swimmer.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Capybara" alt="Capybara" loading="lazy">
+<div class="info"><h3>Capybara</h3>
+<p>The capybara is the world's largest living rodent and comes from South America. It is an excellent swimmer, with partly webbed feet and eyes, ears and nostrils positioned high on its head. Capybaras live in groups near water and graze on grasses and aquatic plants. When danger appears, they can dive underwater to escape predators.</p><span class="tag">Mammal</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/hippopotamus" alt="Hippopotamus"><div class="info"><h3>Hippopotamus</h3><p>A huge semi-aquatic mammal.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Hippopotamus" alt="Hippopotamus" loading="lazy">
+<div class="info"><h3>Hippopotamus</h3>
+<p>Hippos spend much of the day in rivers and pools, where water helps keep their enormous bodies cool. At night, they leave the water to graze on grass. Despite their bulky appearance, they can move surprisingly quickly on land and are highly territorial in water. Their eyes and nostrils sit high on their heads, allowing them to watch while mostly submerged.</p><span class="tag">Mammal</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/american,alligator" alt="American Alligator"><div class="info"><h3>American Alligator</h3><p>A formidable reptile with powerful jaws.</p><span class="tag">Reptile</span></div></article>
+<article class="animal">
+<img data-wiki="American alligator" alt="American Alligator" loading="lazy">
+<div class="info"><h3>American Alligator</h3>
+<p>The American alligator lives in freshwater wetlands in the southeastern United States. Its powerful jaws, armoured body and strong tail make it a well-adapted aquatic predator. Alligators often float with only their eyes and nostrils visible above the water. They also help shape wetland ecosystems by creating small pools that can provide habitat for other wildlife.</p><span class="tag">Reptile</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/aardvark,meerkat" alt="Aardvarks and Meerkats"><div class="info"><h3>Aardvarks and Meerkats</h3><p>NARUTO IN FINALE ZOO! Our burrowing duo and their neighbours.</p><span class="tag">Fan Favourite</span></div></article>
+<article class="animal">
+<img data-wiki="Aardvark" alt="Aardvark" loading="lazy">
+<div class="info"><h3>Aardvarks and Meerkats</h3>
+<p>The aardvark is a nocturnal African mammal with strong claws for digging into termite mounds and ant nests. Its long, sticky tongue can collect thousands of insects in a night — nature's living hoover! Meerkats live in family groups and take turns watching for predators. Both animals have special adaptations that help them survive in dry African environments.</p><span class="tag">African Wildlife</span></div>
+</article>
 
-<article class="animal"><img src="https://loremflickr.com/640/360/european,badger" alt="European Badgers"><div class="info"><h3>European Badgers</h3><p>MY CUTIES! Striped-faced diggers with underground homes.</p><span class="tag">Cuties</span></div></article>
+<article class="animal">
+<img data-wiki="European badger" alt="European Badgers" loading="lazy">
+<div class="info"><h3>European Badgers</h3>
+<p>European badgers are mostly nocturnal mammals recognised by their black-and-white striped faces. They live in underground tunnel systems called setts, which can be used by generations of the same family. Badgers eat a varied diet including earthworms, insects, fruit and other foods. Their powerful front claws help them dig their homes and search for meals beneath the soil.</p><span class="tag">Mammal</span></div>
+</article>
 
-<!-- West African Lion intentionally left unchanged -->
-<article class="animal"><div class="emoji">🦁</div><div class="info"><h3>West African Lion</h3><p>A mighty big cat and iconic African predator.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="West African lion" alt="West African Lion" loading="lazy">
+<div class="info"><h3>West African Lion</h3>
+<p>The West African lion is a rare lion population from West Africa. Lions are social big cats that may live in groups called prides, although their social structure varies by region. They hunt large herbivores and often rest during the heat of the day. Habitat loss and conflict with people have put these lions at serious risk, making conservation and protected areas vital to their future.</p><span class="tag">Big Cat</span></div>
+</article>
 
-<!-- Grizzly Bears intentionally left unchanged -->
-<article class="animal"><div class="emoji">🐻</div><div class="info"><h3>Grizzly Bears</h3><p>Powerful bears with an excellent sense of smell.</p><span class="tag">Mammal</span></div></article>
+<article class="animal">
+<img data-wiki="Grizzly bear" alt="Grizzly Bears" loading="lazy">
+<div class="info"><h3>Grizzly Bears</h3>
+<p>Grizzly bears are powerful brown bears found in parts of North America. Their shoulder hump supports strong muscles that help them dig for roots, insects and other foods. They are omnivores, eating berries, plants, fish and small animals depending on the season. Before winter, they may eat large amounts to build fat reserves. Despite their size, grizzlies are excellent swimmers and can run quickly.</p><span class="tag">Mammal</span></div>
+</article>
 
 </div>
 </section>
 
 <section class="ride" id="final-ride">
 <h2>🚤 The Final Ride</h2>
-<p class="intro">Climb aboard for one last journey through Finale Zoo!</p>
+<p class="ride-intro">Climb aboard for one last journey through the wild! Our riverboat takes you past five incredible animal stops before reaching the grand finale.</p>
 
-<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/addax,antelope" alt="Addax"><div><h3>1. Addax</h3><p>Our journey begins with this desert antelope.</p></div></div>
+<div class="stop">
+<img data-wiki="Addax" alt="Addax" loading="lazy">
+<div><h3>1. Addax</h3><p>The addax is a desert antelope with long, twisted horns and pale fur. Its wide hooves help it travel across sand, and it can survive in extremely dry environments by getting much of its water from food.</p></div>
+</div>
 
-<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/african,buffalo" alt="African Buffalo"><div><h3>2. African Buffalo</h3><p>A powerful grazer of the African savannah.</p></div></div>
+<div class="stop">
+<img data-wiki="African buffalo" alt="African Buffalo" loading="lazy">
+<div><h3>2. African Buffalo</h3><p>The African buffalo is a powerful grazer that lives in herds. Its curved horns provide protection, and its strong social bonds can help members of the herd respond to danger. These animals are an important part of African savannah ecosystems.</p></div>
+</div>
 
-<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/african,penguin" alt="African Penguin"><div><h3>3. African Penguin</h3><p>A splash of coastal wildlife on our route.</p></div></div>
+<div class="stop">
+<img data-wiki="African penguin" alt="African Penguin" loading="lazy">
+<div><h3>3. African Penguin</h3><p>The African penguin lives along the coasts of southern Africa. Its flippers make it an agile swimmer, helping it chase fish underwater. Distinctive black-and-white markings provide camouflage in the sea, while its loud calls help penguins recognise their mates and chicks.</p></div>
+</div>
 
-<div class="stop"><img class="stop-photo" src="https://loremflickr.com/150/130/alpine,ibex" alt="Alpine Ibex"><div><h3>4. Alpine Ibex</h3><p>Look out for those incredible curved horns!</p></div></div>
+<div class="stop">
+<img data-wiki="Alpine ibex" alt="Alpine Ibex" loading="lazy">
+<div><h3>4. Alpine Ibex</h3><p>The Alpine ibex is a wild goat that lives in the steep mountains of Europe. Its specialised hooves provide grip on rocky surfaces, allowing it to climb slopes that seem almost impossible. Males grow enormous curved horns that become more pronounced as they age.</p></div>
+</div>
 
-<div class="stop last"><img class="stop-photo" src="https://loremflickr.com/150/130/polar,bear" alt="Polar Bear"><div><h3>5. Polar Bears — The Grand Finale</h3><p>The final stop of the ride. What a way to end Finale Zoo!</p></div></div>
+<div class="stop">
+<img data-wiki="Polar bear" alt="Polar Bears" loading="lazy">
+<div><h3>5. Polar Bears — The Grand Finale!</h3><p>The polar bear is the largest living bear species and is specially adapted to Arctic life. Thick fur and a layer of body fat help it stay warm in freezing conditions. Its large paws help it walk over snow and swim through icy water. Polar bears depend heavily on sea ice for hunting seals, so the loss of Arctic sea ice is a major threat.</p></div>
+</div>
 
-<p class="end">THANK YOU FOR VISITING FINALE ZOO! 🌿</p>
+<p class="end">🌟 THANK YOU FOR VISITING FINALE ZOO! 🌟</p>
 </section>
 </main>
 
 <footer>
-<strong>FINALE ZOO</strong><br>
-A wildlife adventure built with passion.<br>
-Thanks for being part of the journey.
+<strong>🌿 FINALE ZOO 🌿</strong><br>
+Celebrating wildlife, one amazing animal at a time.<br>
+<a href="#home">Back to the top ↑</a>
 </footer>
 
+<script>
+async function loadAnimalPhoto(img) {
+  const title = img.dataset.wiki;
+  if (!title) return;
+
+  try {
+    const url = "https://en.wikipedia.org/api/rest_v1/page/summary/" +
+      encodeURIComponent(title);
+
+    const response = await fetch(url, {
+      headers: { "Accept": "application/json" }
+    });
+
+    if (!response.ok) throw new Error("No Wikipedia summary found");
+
+    const data = await response.json();
+    const imageUrl = data.thumbnail && data.thumbnail.source;
+
+    if (imageUrl) {
+      img.src = imageUrl;
+      img.style.visibility = "visible";
+    } else {
+      img.alt = title + " — photo unavailable";
+      img.style.visibility = "visible";
+    }
+  } catch (error) {
+    img.alt = title + " — photo could not load";
+    img.style.visibility = "visible";
+    img.style.background = "#dce9cb";
+  }
+}
+
+document.querySelectorAll("img[data-wiki]").forEach(loadAnimalPhoto);
+</script>
 </body>
 </html>
-
-
-
